@@ -1,2 +1,0 @@
-# Multiplayer_Wrapper_Nakama_Integration_Unity
-Multiplayer_Wrapper_Nakama_Integration_Unity
