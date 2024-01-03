@@ -28,13 +28,11 @@ namespace Runtime.Manager
                 Debug.Log(" you are connected to the local NAKAMA server");
                 Modules.SessionConfigDevice sessionConfigDevice = new SessionConfigDevice();
                 sessionConfigDevice.UniqueIdentifier = SystemInfo.deviceUniqueIdentifier;
-                var (sessionSuccess, sessionClient) =await 
-                    SessionFactory.CreateSession("localSession",localClient, sessionConfigDevice);
+                var (sessionSuccess, sessionClient) =await SessionFactory.CreateSession("localSession",localClient, sessionConfigDevice);
                 if (sessionSuccess)
                 {
                     Debug.Log("Session Tag : "  + sessionClient.tag);
                     Debug.Log("Session  : "  + sessionClient.Session);
-               
                 }
             
             }
