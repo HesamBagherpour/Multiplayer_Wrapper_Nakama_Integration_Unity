@@ -3,6 +3,7 @@ using System.Threading.Tasks;
 using Runtime.Factory;
 using Runtime.Modules;
 using Runtime.NakamaConfig.ClientConfig;
+using Runtime.NakamaConfig.SocketConfig;
 using UnityEngine;
 
 namespace Runtime.Manager
@@ -14,6 +15,8 @@ namespace Runtime.Manager
         public static NakamaManager Instance;
         private ServerClientConfigs ServerClientConfigs;
         public SessionConfigDevice SessionConfigDevice;
+        public SocketFactory SocketFactory;
+     
 
         private async Task Awake()
         {
@@ -21,6 +24,8 @@ namespace Runtime.Manager
             ServerClientConfigs = new ServerClientConfigs();
             ClientFactory = new ClientFactory();
             SessionFactory = new SessionFactory();
+            
+            
             var (clinteSuccess, localClient) = await ClientFactory.CreateClint("local", ServerClientConfigs);
             if (clinteSuccess)
             {
@@ -31,10 +36,17 @@ namespace Runtime.Manager
                 var (sessionSuccess, sessionClient) =await SessionFactory.CreateSession("localSession",localClient, sessionConfigDevice);
                 if (sessionSuccess)
                 {
-                    Debug.Log("Session Tag : "  + sessionClient.tag);
-                    Debug.Log("Session  : "  + sessionClient.Session);
+                    Debug.Log("Session Tag : " + sessionClient.tag);
+                    Debug.Log("Session  : " + sessionClient.Session);
+                    var (socketSucess, socket) =
+                        await SocketFactory.CreateOrGetSocket("chat", localClient, new SocketConfig());
+
+                    if (sessionSuccess)
+                    {
+                        Debug.Log( "socket : "  + socket.socket);
+                    }
                 }
-            
+
             }
             else
             {
