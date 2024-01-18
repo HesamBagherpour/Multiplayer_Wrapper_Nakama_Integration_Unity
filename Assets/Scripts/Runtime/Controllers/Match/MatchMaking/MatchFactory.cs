@@ -5,13 +5,13 @@ using Newtonsoft.Json;
 using Runtime.Controllers;
 using Runtime.Controllers.Match;
 using Runtime.Controllers.Match.MatchMaking;
-using Runtime.Controllers.Match.MatchMaking.Model;
 using Runtime.Core;
 using Runtime.NakamaConfig.MatchConfig;
 using Runtime.NakamaConfig.OpCode;
 using theHesam.NakamaExtension.Runtime.Core;
+using theHesam.NakamaExtension.Runtime.NakamaConfig.MatchConfig;
 using UnityEngine;
-using ManualMatchMakingConfig = Runtime.NakamaConfig.MatchConfig.ManualMatchMakingConfig;
+using ManualMatchMakingConfig = theHesam.NakamaExtension.Runtime.NakamaConfig.MatchConfig.ManualMatchMakingConfig;
 
 namespace theHesam.NakamaExtension.Runtime.Controllers.Match.MatchMaking
 {

@@ -1,7 +1,7 @@
 using Cysharp.Threading.Tasks;
 using Nakama;
-using Runtime.Factory;
-using Runtime.NakamaConfig.ClientConfig;
+using theHesam.NakamaExtension.Runtime.Factory;
+using theHesam.NakamaExtension.Runtime.NakamaConfig.ClientConfig;
 using UnityEngine;
 
 namespace Runtime.Core

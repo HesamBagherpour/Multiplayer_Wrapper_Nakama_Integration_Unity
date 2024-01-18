@@ -1,8 +1,8 @@
 ﻿using Cysharp.Threading.Tasks;
 using Newtonsoft.Json;
-using Runtime.NakamaConfig.MatchConfig;
+using theHesam.NakamaExtension.Runtime.NakamaConfig.MatchConfig;
 
-namespace Runtime.Controllers.Match.MatchMaking
+namespace theHesam.NakamaExtension.Runtime.Controllers.Match.MatchMaking
 {
     public class ManualMatchMaking: IMatchMaking<ManualMatchMakingConfig>
     {

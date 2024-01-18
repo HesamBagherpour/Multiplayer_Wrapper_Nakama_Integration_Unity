@@ -3,12 +3,11 @@ using System.Collections.Generic;
 using Cysharp.Threading.Tasks;
 using Nakama;
 using Runtime.Core;
-using Runtime.NakamaConfig.MatchConfig;
 using Runtime.NakamaConfig.OpCode;
 using theHesam.NakamaExtension.Runtime.Core;
 using theHesam.NakamaExtension.Runtime.NakamaConfig.MatchConfig;
 
-namespace Runtime.Factory
+namespace theHesam.NakamaExtension.Runtime.Factory
 {
     public class MatchMakingFactory
     {

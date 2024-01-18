@@ -1,10 +1,10 @@
 using Cysharp.Threading.Tasks;
 using Nakama;
 using Nakama.TinyJson;
-using Runtime.Controllers.Match.MatchMaking.Model;
 using Runtime.Utilities;
+using theHesam.NakamaExtension.Runtime.NakamaConfig.MatchConfig;
 
-namespace Runtime.Controllers.Match.MatchMaking
+namespace theHesam.NakamaExtension.Runtime.Controllers.Match.MatchMaking
 {
     public class RpcMatchMaking : IMatchMaking<RpcMatchMakingConfig>
     {

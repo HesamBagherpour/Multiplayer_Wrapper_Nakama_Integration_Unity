@@ -2,7 +2,7 @@ using Runtime.Controllers.Match;
 using Runtime.Core;
 using theHesam.NakamaExtension.Runtime.Core;
 
-namespace Runtime.Controllers
+namespace theHesam.NakamaExtension.Runtime.Controllers.Match
 {
     public class MatchExtended
     {

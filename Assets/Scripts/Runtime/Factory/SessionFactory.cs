@@ -5,7 +5,7 @@ using Runtime.Core;
 using Runtime.Modules;
 using theHesam.NakamaExtension.Runtime.Core;
 
-namespace Runtime.Factory
+namespace theHesam.NakamaExtension.Runtime.Factory
 {
     public class SessionFactory
     {

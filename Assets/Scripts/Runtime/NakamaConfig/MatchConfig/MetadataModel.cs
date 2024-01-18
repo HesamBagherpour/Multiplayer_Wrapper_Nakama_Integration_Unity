@@ -1,5 +1,5 @@
 using System.Runtime.Serialization;
-using Runtime.NakamaConfig.ClientConfig;
+using theHesam.NakamaExtension.Runtime.NakamaConfig.ClientConfig;
 
 namespace Runtime.NakamaConfig.MatchConfig
 {

@@ -1,11 +1,10 @@
 ﻿using System;
 using Cysharp.Threading.Tasks;
 using Nakama;
-using Runtime.Core;
-using Runtime.NakamaConfig.ChannelConfig;
 using theHesam.NakamaExtension.Runtime.Core;
+using theHesam.NakamaExtension.Runtime.NakamaConfig.ChannelConfig;
 
-namespace Runtime.Factory
+namespace theHesam.NakamaExtension.Runtime.Factory
 {
     public class ChannelsFactory
     {

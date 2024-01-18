@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Infinite8.NakamaExtension.Controllers.Match.MatchMaking.Model
+namespace theHesam.NakamaExtension.Runtime.NakamaConfig.MatchConfig
 {
     [Serializable]
     public class RpcMatchData

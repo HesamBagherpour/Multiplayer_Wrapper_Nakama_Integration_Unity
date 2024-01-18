@@ -1,6 +1,6 @@
 using Cysharp.Threading.Tasks;
 
-namespace Runtime.Controllers.Match.MatchMaking
+namespace theHesam.NakamaExtension.Runtime.Controllers.Match.MatchMaking
 {
     public interface IMatchMaking<in T>
     {

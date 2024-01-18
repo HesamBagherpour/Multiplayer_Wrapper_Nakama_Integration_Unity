@@ -1,6 +1,7 @@
 ﻿using System;
 using Runtime.Core;
 using theHesam.NakamaExtension.Runtime.Core;
+using theHesam.NakamaExtension.Runtime.NakamaConfig.MatchConfig;
 
 namespace Runtime.NakamaConfig.MatchConfig
 {

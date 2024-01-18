@@ -1,4 +1,6 @@
-﻿namespace Runtime.NakamaConfig.MatchConfig
+﻿using Runtime.NakamaConfig.MatchConfig;
+
+namespace theHesam.NakamaExtension.Runtime.NakamaConfig.MatchConfig
 {
     public class ManualMatchMakingConfig: MatchMakingGeneralModel
     {

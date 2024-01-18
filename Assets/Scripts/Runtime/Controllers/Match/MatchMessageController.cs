@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using Cysharp.Threading.Tasks;
 using Nakama;
-using Runtime.Core;
+using Runtime.Controllers.Match;
 using Runtime.NakamaConfig.OpCode;
 using theHesam.NakamaExtension.Runtime.Core;
 using UnityEngine;
 
-namespace Runtime.Controllers.Match
+namespace theHesam.NakamaExtension.Runtime.Controllers.Match
 {
     public class MatchMessageController : MonoBehaviour
     {

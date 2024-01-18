@@ -2,9 +2,9 @@ using System;
 using System.Collections.Generic;
 using Cysharp.Threading.Tasks;
 using Runtime.Core;
-using Runtime.NakamaConfig.ClientConfig;
+using theHesam.NakamaExtension.Runtime.NakamaConfig.ClientConfig;
 
-namespace Runtime.Factory
+namespace theHesam.NakamaExtension.Runtime.Factory
 {
     public class ClientFactory 
     {

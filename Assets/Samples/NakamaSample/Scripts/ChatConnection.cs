@@ -2,19 +2,20 @@ using System;
 using Runtime.Controllers;
 using Runtime.Controllers.Match;
 using Runtime.Controllers.Match.MatchMaking;
-using Runtime.Controllers.Match.MatchMaking.Model;
 using Runtime.Controllers.Session;
 using Runtime.Core;
-using Runtime.Factory;
-using Runtime.Manager;
 using Runtime.Modules;
-using Runtime.NakamaConfig.ClientConfig;
 using Runtime.NakamaConfig.MatchConfig;
 using Runtime.NakamaConfig.OpCode;
 using Runtime.NakamaConfig.SocketConfig;
 using theHesam.NakamaExtension.Runtime.Controllers.Channel;
+using theHesam.NakamaExtension.Runtime.Controllers.Match;
 using theHesam.NakamaExtension.Runtime.Controllers.Match.MatchMaking;
 using theHesam.NakamaExtension.Runtime.Core;
+using theHesam.NakamaExtension.Runtime.Factory;
+using theHesam.NakamaExtension.Runtime.Manager;
+using theHesam.NakamaExtension.Runtime.NakamaConfig.ClientConfig;
+using theHesam.NakamaExtension.Runtime.NakamaConfig.MatchConfig;
 using UnityEngine;
 
 namespace theHesam.NakamaExtension.Sample.Samples.NakamaSample.Scripts

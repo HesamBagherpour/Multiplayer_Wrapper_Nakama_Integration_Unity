@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Runtime.NakamaConfig.MatchConfig
+namespace theHesam.NakamaExtension.Runtime.NakamaConfig.MatchConfig
 {
     [Serializable]
     public class MatchFilter

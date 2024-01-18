@@ -1,7 +1,7 @@
 using Nakama;
-using theHesam.NakamaExtension.Runtime.Core;
+using Runtime.Core;
 
-namespace Runtime.Core
+namespace theHesam.NakamaExtension.Runtime.Core
 {
     public class MatchmakerTicketExtended
     {

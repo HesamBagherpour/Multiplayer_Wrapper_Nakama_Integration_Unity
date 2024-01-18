@@ -1,7 +1,7 @@
 ﻿using System;
 using Nakama;
 
-namespace Runtime.NakamaConfig.MatchConfig
+namespace theHesam.NakamaExtension.Runtime.NakamaConfig.MatchConfig
 {
     public interface MatchStateExtended
     {

@@ -1,6 +1,6 @@
 ﻿using Nakama;
 
-namespace Runtime.NakamaConfig.ChannelConfig
+namespace theHesam.NakamaExtension.Runtime.NakamaConfig.ChannelConfig
 {
     public class ChannelConfig
     {

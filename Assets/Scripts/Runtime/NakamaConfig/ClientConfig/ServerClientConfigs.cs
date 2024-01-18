@@ -1,6 +1,4 @@
-using UnityEngine;
-
-namespace Runtime.NakamaConfig.ClientConfig
+namespace theHesam.NakamaExtension.Runtime.NakamaConfig.ClientConfig
 {
     public  class ServerClientConfigs
     {

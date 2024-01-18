@@ -1,7 +1,7 @@
-﻿using Runtime.Factory;
+﻿using theHesam.NakamaExtension.Runtime.Factory;
 using UnityEngine;
 
-namespace Runtime.Manager
+namespace theHesam.NakamaExtension.Runtime.Manager
 {
     public class NakamaManager : MonoBehaviour
     {

@@ -1,6 +1,6 @@
 ﻿using Runtime.NakamaConfig.MatchConfig;
 
-namespace Runtime.Controllers.Match.MatchMaking.Model
+namespace theHesam.NakamaExtension.Runtime.NakamaConfig.MatchConfig
 {
     public class RpcMatchMakingConfig : MatchMakingGeneralModel
     {
