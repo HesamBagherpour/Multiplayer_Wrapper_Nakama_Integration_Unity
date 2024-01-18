@@ -1,9 +1,7 @@
-﻿using System;
-using Runtime.Core;
+﻿using Runtime.Core;
 using theHesam.NakamaExtension.Runtime.Core;
-using theHesam.NakamaExtension.Runtime.NakamaConfig.MatchConfig;
 
-namespace Runtime.NakamaConfig.MatchConfig
+namespace theHesam.NakamaExtension.Runtime.NakamaConfig.MatchConfig
 {
     public abstract class MatchMakingGeneralModel
     {
@@ -18,8 +16,8 @@ namespace Runtime.NakamaConfig.MatchConfig
 
     public enum MatchMakingType
     {
-        RPC,
-        Auto,
-        Manual
+        MatchMaking,
+        MatchListing,
+        Auto
     }
 }

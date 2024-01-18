@@ -2,11 +2,8 @@ using System;
 using System.Collections.Generic;
 using Cysharp.Threading.Tasks;
 using Newtonsoft.Json;
-using Runtime.Controllers;
 using Runtime.Controllers.Match;
-using Runtime.Controllers.Match.MatchMaking;
 using Runtime.Core;
-using Runtime.NakamaConfig.MatchConfig;
 using Runtime.NakamaConfig.OpCode;
 using theHesam.NakamaExtension.Runtime.Core;
 using theHesam.NakamaExtension.Runtime.NakamaConfig.MatchConfig;
@@ -23,27 +20,21 @@ namespace theHesam.NakamaExtension.Runtime.Controllers.Match.MatchMaking
         public string latestTagCreated;
 
         public async UniTask<Tuple<bool, GeneralResModel<MatchExtended>>> CreateMatch(string tag, ClientExtended clientExtended,
-            SessionExtended sessionExtended, MatchMakingGeneralModel matchMakingConfig, MatchMessageController matchMessageController, MatchConnectionController matchConnectionController)
+            SessionExtended sessionExtended, MatchMakingGeneralModel matchMakingConfig, MatchMessageController matchMessageController,
+            MatchConnectionController matchConnectionController)
         {
-            //MatchFilter roomTokenPayload = new MatchFilter();
             string matchMakingResponse = null;
 
             switch (matchMakingConfig.matchMakingType)
             {
-                case MatchMakingType.Manual:
-                    Debug.unityLogger.Log("MatchFactory | CreateMatch | MatchMakingType.Manual");
+                case MatchMakingType.MatchListing:
+                    Debug.unityLogger.Log("MatchFactory | MatchListing | MatchMakingType.Manual");
                     matchMakingResponse = await new ManualMatchMaking().StartMatchMaking((ManualMatchMakingConfig)matchMakingConfig);
                     break;
-                case MatchMakingType.RPC:
-                    Debug.unityLogger.Log("MatchFactory | CreateMatch | MatchMakingType.RPC");
+                case MatchMakingType.MatchMaking:
+                    Debug.unityLogger.Log("MatchFactory | MatchMaking | MatchMakingType.RPC");
                     matchMakingResponse = await new RpcMatchMaking().StartMatchMaking((RpcMatchMakingConfig) matchMakingConfig);
                     break;
-                case MatchMakingType.Auto:
-                    Debug.unityLogger.Log("MatchFactory | CreateMatch | MatchMakingType.Auto");
-                    break;
-                default:
-                    Debug.unityLogger.Log("MatchFactory | CreateMatch | default");
-                    throw new ArgumentOutOfRangeException();
             }
 
             if (matchMakingResponse == null)
