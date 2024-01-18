@@ -1,0 +1,21 @@
+{
+    "name": "TheHesam.NakamaExtension",
+    "rootNamespace": "theHesam.NakamaExtension",
+    "references": [
+        "UniTask",
+        "NakamaRuntime",
+        "UniTask.Linq"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": true,
+    "precompiledReferences": [
+        "Newtonsoft.Json.dll",
+        "Nakama.dll"
+    ],
+    "autoReferenced": false,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

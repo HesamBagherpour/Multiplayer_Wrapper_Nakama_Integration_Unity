@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using Cysharp.Threading.Tasks;
 using Runtime.Core;
 using Runtime.NakamaConfig.SocketConfig;
+using theHesam.NakamaExtension.Runtime.Core;
 
-namespace Runtime.Factory
+namespace theHesam.NakamaExtension.Runtime.Factory
 {
     public class SocketFactory
     {

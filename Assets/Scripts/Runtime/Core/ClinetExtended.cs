@@ -1,5 +1,6 @@
 using Cysharp.Threading.Tasks;
 using Nakama;
+using Runtime.Factory;
 using Runtime.NakamaConfig.ClientConfig;
 using UnityEngine;
 
@@ -9,25 +10,30 @@ namespace Runtime.Core
     {
         public string tag;
         public IClient Client;
-        // public Session factory 
-        private readonly ServerClientConfigs _clientConfigs;
+        public SessionFactory SessionFactory;
+        private readonly ServerClientConfigs _clientConfig;
+        
 
         public async UniTask<ClientExtended> Init()
         {
-            
-            Debug.Log("clintItem ");
+            Debug.Log("clintItem");
+            Client = new Client(_clientConfig.scheme, _clientConfig.host,
+                _clientConfig.port,
+                _clientConfig.serverKey,
+                UnityWebRequestAdapter.Instance,
+                _clientConfig.autoRefreshSession);
 
-            Client = new Client(_clientConfigs.scheme, _clientConfigs.host, _clientConfigs.port,
-                _clientConfigs.serverKey, UnityWebRequestAdapter.Instance, _clientConfigs.autoRefreshSession);
-            Debug.Log(Client);
-                //Debug.Log(await CallRpcAsync());
+            //Debug.Log(await CallRpcAsync());
+            SessionFactory = new SessionFactory();
+
             return this;
         }
 
         public ClientExtended(string tag, ServerClientConfigs serverClientConfigs)
         {
             this.tag = tag;
-            this._clientConfigs = serverClientConfigs;
+            this._clientConfig = serverClientConfigs;
+            SessionFactory = new SessionFactory();
             
             
         }

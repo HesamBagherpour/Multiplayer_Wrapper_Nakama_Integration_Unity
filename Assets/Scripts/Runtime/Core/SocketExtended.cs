@@ -1,8 +1,10 @@
 ﻿using System.Threading.Tasks;
 using Nakama;
+using Runtime.Core;
 using Runtime.NakamaConfig.SocketConfig;
+using theHesam.NakamaExtension.Runtime.Controllers.Match.MatchMaking;
 
-namespace Runtime.Core
+namespace theHesam.NakamaExtension.Runtime.Core
 {
     public class SocketExtended
     {
@@ -17,6 +19,8 @@ namespace Runtime.Core
 
         // An instance of the Nakama SocketConfig class, representing configuration settings for the socket
         public SocketConfig SocketConfig;
+        public MatchFactory MatchFactory = new MatchFactory();
+
 
         // Constructor to initialize the SocketExtended instance with a tag, extended client, and socket configuration
         public SocketExtended(string tag, ClientExtended clientExtended, SocketConfig socketConfig)
