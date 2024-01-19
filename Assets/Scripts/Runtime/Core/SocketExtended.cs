@@ -3,6 +3,7 @@ using Nakama;
 using Runtime.Core;
 using Runtime.NakamaConfig.SocketConfig;
 using theHesam.NakamaExtension.Runtime.Controllers.Match.MatchMaking;
+using theHesam.NakamaExtension.Runtime.Factory;
 
 namespace theHesam.NakamaExtension.Runtime.Core
 {

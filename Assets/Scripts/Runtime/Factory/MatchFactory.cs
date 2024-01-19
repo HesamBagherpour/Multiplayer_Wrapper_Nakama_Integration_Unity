@@ -5,27 +5,32 @@ using Newtonsoft.Json;
 using Runtime.Controllers.Match;
 using Runtime.Core;
 using Runtime.NakamaConfig.OpCode;
+using theHesam.NakamaExtension.Runtime.Controllers.Match;
+using theHesam.NakamaExtension.Runtime.Controllers.Match.MatchMaking;
 using theHesam.NakamaExtension.Runtime.Core;
 using theHesam.NakamaExtension.Runtime.NakamaConfig.MatchConfig;
 using UnityEngine;
 using ManualMatchMakingConfig = theHesam.NakamaExtension.Runtime.NakamaConfig.MatchConfig.ManualMatchMakingConfig;
 
-namespace theHesam.NakamaExtension.Runtime.Controllers.Match.MatchMaking
+namespace theHesam.NakamaExtension.Runtime.Factory
 {
-    // I8Match list
     public class MatchFactory
     {
         private List<MatchExtended> _matchExtended = new List<MatchExtended>();
         public Action<MatchExtended> OnCreateMatch;
         public string latestTagCreated;
 
-        public async UniTask<Tuple<bool, GeneralResModel<MatchExtended>>> CreateMatch(string tag, ClientExtended clientExtended,
-            SessionExtended sessionExtended, MatchMakingGeneralModel matchMakingConfig, MatchMessageController matchMessageController,
+        public async UniTask<Tuple<bool, GeneralResModel<MatchExtended>>> CreateMatch(
+            string tag, 
+            ClientExtended clientExtended,
+            SessionExtended sessionExtended, 
+            MatchMakingGeneralModel matchMakingConfig, 
+            MatchMessageController matchMessageController,
             MatchConnectionController matchConnectionController)
         {
             string matchMakingResponse = null;
 
-            switch (matchMakingConfig.matchMakingType)
+            switch (matchMakingConfig.MatchMakingType)
             {
                 case MatchMakingType.MatchListing:
                     Debug.unityLogger.Log("MatchFactory | MatchListing | MatchMakingType.Manual");

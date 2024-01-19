@@ -11,8 +11,8 @@ namespace theHesam.NakamaExtension.Runtime.Controllers.Match.MatchMaking
         public async UniTask<string> StartMatchMaking(RpcMatchMakingConfig matchMakingConfig)
         {
             // var payload = (JsonConvert.SerializeObject(matchMakingConfig.matchFilter));
-            var payload = matchMakingConfig.matchFilter.ToJson();
-            return await NakamaRpc.SendRpc<string>(matchMakingConfig.client.Client, matchMakingConfig.session.Session, matchMakingConfig.rpcConfig.rpcName,
+            var payload = matchMakingConfig.MatchFilter.ToJson();
+            return await NakamaRpc.SendRpc<string>(matchMakingConfig.Client.Client, matchMakingConfig.Session.Session, matchMakingConfig.rpcConfig.rpcName,
                 matchMakingConfig.rpcConfig.timeOutSec,
                 payload, new RetryConfiguration(matchMakingConfig.rpcConfig.baseDelayMs,
                     matchMakingConfig.rpcConfig.maxRetries));

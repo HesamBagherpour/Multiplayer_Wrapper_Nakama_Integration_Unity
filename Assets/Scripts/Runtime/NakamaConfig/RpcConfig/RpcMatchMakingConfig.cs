@@ -5,7 +5,7 @@ namespace Runtime.NakamaConfig.RpcConfig
 {
     public class RpcMatchMakingConfig : MatchMakingGeneralModel
     {
-        public override MatchMakingType matchMakingType => MatchMakingType.MatchMaking;
+        public override MatchMakingType MatchMakingType => MatchMakingType.MatchMaking;
         public theHesam.NakamaExtension.Runtime.NakamaConfig.MatchConfig.RpcConfig rpcConfig;
     }
 }

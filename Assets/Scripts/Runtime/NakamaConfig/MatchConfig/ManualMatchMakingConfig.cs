@@ -4,7 +4,7 @@ namespace theHesam.NakamaExtension.Runtime.NakamaConfig.MatchConfig
 {
     public class ManualMatchMakingConfig: MatchMakingGeneralModel
     {
-        public override MatchMakingType matchMakingType => MatchMakingType.MatchListing;
+        public override MatchMakingType MatchMakingType => MatchMakingType.MatchListing;
         public string matchId;
     }
 }
